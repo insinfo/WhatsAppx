@@ -50,6 +50,7 @@ namespace WhatsAppx
 
         public MainWindow()
         {
+
             var mySett = new MySettings();
             this.Settings = mySett.Read();
             
