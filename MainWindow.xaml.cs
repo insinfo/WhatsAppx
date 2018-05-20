@@ -27,18 +27,46 @@ namespace WhatsAppx
     {
         CefSharp.IBrowser browser;
         CefSharp.IBrowserHost host;
-        CefSharp.Wpf.ChromiumWebBrowser Browser;
-        string mensagem = "teste";
-        List<Contato> contatos;
+        CefSharp.Wpf.ChromiumWebBrowser Browser;  
         TempFileDialogHandler tempFileDialogHandler;
+        DBHandlerMySQL dbHandlerMySQL;
+      
+
+        public MySettings Settings { get; private set; }
+
+        public void LoadSettings()
+        {
+            TxtHost.Text = Settings.Server;
+            TxtDataBase.Text = Settings.Database;
+            TxtPassword.Password = Settings.Password;
+            TxtUser.Text = Settings.User;
+            TxtUserAgent.Text = Settings.UserAgent;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadSettings();           
+        }
 
         public MainWindow()
         {
+            var mySett = new MySettings();
+            this.Settings = mySett.Read();
+            
+            dbHandlerMySQL = new DBHandlerMySQL();
+            dbHandlerMySQL.Server = Settings.Server;
+            dbHandlerMySQL.Port = Settings.Port;
+            dbHandlerMySQL.Password = Settings.Password;
+            dbHandlerMySQL.User = Settings.User;
+            dbHandlerMySQL.Database = Settings.Database;
+            dbHandlerMySQL.Connect();           
+
             InitializeComponent();
             CefSharp.CefSettings settings = new CefSharp.CefSettings();
             settings.CachePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\CEF";
             settings.PersistSessionCookies = true;
             settings.PersistUserPreferences = true;
+            settings.UserAgent = Settings.UserAgent;        
             CefSharp.Cef.Initialize(settings);
 
             Browser = new CefSharp.Wpf.ChromiumWebBrowser();
@@ -110,14 +138,12 @@ namespace WhatsAppx
             host = browser.GetHost();
 
         }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+                
         private void BtnExecute_Click(object sender, RoutedEventArgs e)
-        {
+        {           
+            //var contatos = dbHandlerMySQL.GetContatos();
+            //Console.WriteLine(contatos[0].Nome);
+           // Console.WriteLine(dbHandlerMySQL.GetLastMensagem().Media);
             //var script = @"(() => { console.log('sad'); var element = document.activeElement; return element.tagName; })(); ";
             /*var script = @" 
                     setTimeout(function(){ 
@@ -147,13 +173,13 @@ namespace WhatsAppx
            */
             //browser.MainFrame.Paste();
 
-            KeyEvent k = new KeyEvent();
+            /*KeyEvent k = new KeyEvent();
             k.WindowsKeyCode = 0x41;
             k.FocusOnEditableField = true;
             k.IsSystemKey = false;
             k.Type = KeyEventType.KeyDown;
 
-            browser.GetHost().SendKeyEvent(k);
+            browser.GetHost().SendKeyEvent(k);*/
         }
 
         private async void BtnColar_Click(object sender, RoutedEventArgs e)
@@ -161,80 +187,79 @@ namespace WhatsAppx
             //browser.MainFrame.Paste();
             //LeftMouseClick(170, 231);
 
-            mensagem = TxtMensagem.Text;
-            if(mensagem == "")
-            {
-                MessageBox.Show("Mensagem não pode ser vazia");
-                return;
-            }
-           /* for (int x = 0; x < 3; x++)
-            {
-                text[x] = TxtContatos.Lines[x];
-            }*/
-
+            var contatos = dbHandlerMySQL.GetContatos();
+            var mensagem = dbHandlerMySQL.GetLastMensagem();
             var mainFrame = browser.MainFrame;
-            var nomeContato = "Alex Programador Amorim Florindo";
-           
-            //1º obtem a posição x y da caixa de pesquisa e digita o nome do contato
-            var task1 = mainFrame.EvaluateScriptAsync(GetSearchInputXY());
-            await task1.ContinueWith(tas1 =>
+
+            foreach (Contato contato in contatos)
             {
-                if (!tas1.IsFaulted)
-                {                    
-                    var p1 = tas1.Result.Success ? (tas1.Result.Result ?? "null") : tas1.Result.Message;
-                    Debug.WriteLine("GetSearchInputXY "+p1);
+                var mensagemTexto = mensagem.Texto;               
+                var nomeContato = contato.Nome;
+
+                //1º obtem a posição x y da caixa de pesquisa e digita o nome do contato
+                var task1 = mainFrame.EvaluateScriptAsync(GetSearchInputXY());
+                await task1.ContinueWith(tas1 =>
+                {
+                    if (!tas1.IsFaulted)
+                    {
+                        var p1 = tas1.Result.Success ? (tas1.Result.Result ?? "null") : tas1.Result.Message;
+                        Debug.WriteLine("GetSearchInputXY " + p1);
                     //clica na caixa de pesquisa
                     TriggerClickEvent(GetPointFromObj(p1));
                     //digita o nome do contato
-                    DigitaNomeContato(nomeContato);    
-                }
-            }, TaskScheduler.FromCurrentSynchronizationContext());
-            //aguarda 3 segundos
-            await Task.Delay(3000);
-            //2º inicia o chat
-            var task2 = mainFrame.EvaluateScriptAsync(StartChatWith(nomeContato));
-            await task2.ContinueWith(tas2 =>
-            {
-                if (!tas2.IsFaulted)
+                    DigitaNomeContato(nomeContato);
+                    }
+                }, TaskScheduler.FromCurrentSynchronizationContext());
+                //aguarda 3 segundos
+                await Task.Delay(3000);
+                //2º inicia o chat
+                var task2 = mainFrame.EvaluateScriptAsync(StartChatWith(nomeContato));
+                await task2.ContinueWith(tas2 =>
                 {
-                    var isOk = tas2.Result.Success ? (tas2.Result.Result ?? "null") : tas2.Result.Message;
-                    Debug.WriteLine("StartChatWith " + isOk);
-                }
-            }, TaskScheduler.FromCurrentSynchronizationContext());
-            //aguarda 3 segundos
-            await Task.Delay(3000);
-            //3º obtem a posição x y da caixa mensagem 
-            var task3 = mainFrame.EvaluateScriptAsync(GetMessageInputXY());
-             await task3.ContinueWith(tas3 =>
-             {
-                 if (!tas3.IsFaulted)
-                 {
-                     var p2 = tas3.Result.Success ? (tas3.Result.Result ?? "null") : tas3.Result.Message;
-                     Debug.WriteLine("GetMessageInputXY " + p2);
+                    if (!tas2.IsFaulted)
+                    {
+                        var isOk = tas2.Result.Success ? (tas2.Result.Result ?? "null") : tas2.Result.Message;
+                        Debug.WriteLine("StartChatWith " + isOk);
+                    }
+                }, TaskScheduler.FromCurrentSynchronizationContext());
+                //aguarda 3 segundos
+                await Task.Delay(3000);
+                //3º obtem a posição x y da caixa mensagem 
+                var task3 = mainFrame.EvaluateScriptAsync(GetMessageInputXY());
+                await task3.ContinueWith(tas3 =>
+                {
+                    if (!tas3.IsFaulted)
+                    {
+                        var p2 = tas3.Result.Success ? (tas3.Result.Result ?? "null") : tas3.Result.Message;
+                        Debug.WriteLine("GetMessageInputXY " + p2);
                      //clica na caixa de mensagem
-                      TriggerClickEvent(GetPointFromObj(p2));
+                     TriggerClickEvent(GetPointFromObj(p2));
                      //digita o testo da mensagem
-                     DigitaNomeContato(mensagem);
+                     DigitaNomeContato(mensagemTexto);
                      //LeftMouseClick(GetPointFromObj(p2).X, GetPointFromObj(p2).Y);
 
                  }
-             }, TaskScheduler.FromCurrentSynchronizationContext());
-                       
-            await Task.Delay(3000);
-            //4º envia a mensagem
-            var task4 = mainFrame.EvaluateScriptAsync(GetBtnSendMessageXY());
-            await task4.ContinueWith(tas4 =>
-            {
-                if (!tas4.IsFaulted)
+                }, TaskScheduler.FromCurrentSynchronizationContext());
+                if (mensagem.Media != null)
                 {
-                    var p3 = tas4.Result.Success ? (tas4.Result.Result ?? "null") : tas4.Result.Message;
-                    Debug.WriteLine("GetBtnSendMessageXY " + p3);
+
+                }
+                await Task.Delay(3000);
+                //4º envia a mensagem
+                var task4 = mainFrame.EvaluateScriptAsync(GetBtnSendMessageXY());
+                await task4.ContinueWith(tas4 =>
+                {
+                    if (!tas4.IsFaulted)
+                    {
+                        var p3 = tas4.Result.Success ? (tas4.Result.Result ?? "null") : tas4.Result.Message;
+                        Debug.WriteLine("GetBtnSendMessageXY " + p3);
                     //clica nno botão de envio de mensagem
                     TriggerClickEvent(GetPointFromObj(p3));
-                    
-                }
-            }, TaskScheduler.FromCurrentSynchronizationContext());
-            Debug.WriteLine("fim");
+
+                    }
+                }, TaskScheduler.FromCurrentSynchronizationContext());
+                Debug.WriteLine("fim do envio da memsagem");
+            }
         }                      
 
         public string StartChatWith(string contatoNome)
@@ -350,6 +375,7 @@ namespace WhatsAppx
             host.SendMouseClickEvent(p.X, p.Y, MouseButtonType.Left, true, 1, CefEventFlags.None);
         }
 
+
         /***************** UTILS ********************/
 
         public IntPoint GetPointFromObj(object str)
@@ -420,6 +446,16 @@ namespace WhatsAppx
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern short VkKeyScan(char ch);
 
+        private void BtnSaveSettings_Click(object sender, RoutedEventArgs e)
+        {
+            Settings.Server = TxtHost.Text;
+            Settings.Database = TxtDataBase.Text;
+            Settings.Password = TxtPassword.Password;
+            Settings.User = TxtUser.Text;
+            Settings.UserAgent = TxtUserAgent.Text;
+
+            Settings.Save();
+        }
     }
     //subistitui o file dialog do navegar
     public class TempFileDialogHandler : IDialogHandler

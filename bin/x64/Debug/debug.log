@@ -408,3 +408,78 @@ C:\fakepath(60,24-44): warning X3571: pow(f, e) will not work for negative f, us
 [0514/000012.880:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
 [0514/000345.914:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
 [0514/000345.915:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/162317.761:INFO:CONSOLE(11)] "Unhandled rejection: Error: Failed to execute 'delete' on 'IDBObjectStore': No key or key range specified.
+    at https://web.whatsapp.com/vendor2.520649262aa5adf9d52d.js:11:30413
+    at r (https://web.whatsapp.com/vendor2.520649262aa5adf9d52d.js:11:25129)
+    at https://web.whatsapp.com/vendor2.520649262aa5adf9d52d.js:11:13861
+    at ct (https://web.whatsapp.com/vendor2.520649262aa5adf9d52d.js:11:10196)
+    at ut (https://web.whatsapp.com/vendor2.520649262aa5adf9d52d.js:11:10092)
+    at https://web.whatsapp.com/vendor2.520649262aa5adf9d52d.js:11:13836
+    at https://web.whatsapp.com/vendor2.520649262aa5adf9d52d.js:12:385
+    at Y (https://web.whatsapp.com/vendor2.520649262aa5adf9d52d.js:11:7491)
+    at new z (https://web.whatsapp.com/vendor2.520649262aa5adf9d52d.js:11:7311)
+    at https://web.whatsapp.com/vendor2.520649262aa5adf9d52d.js:12:253", source: https://web.whatsapp.com/vendor2.520649262aa5adf9d52d.js (11)
+[0520/162318.024:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/162318.489:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/163556.747:ERROR:media_internals.cc(102)] Cannot get RenderProcessHost
+[0520/163718.855:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/163718.856:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/163930.956:ERROR:media_internals.cc(102)] Cannot get RenderProcessHost
+[0520/164026.168:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/164026.168:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/164122.218:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/164122.219:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/170855.560:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/170855.562:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/170929.111:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/170929.111:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/171135.855:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/171135.855:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/171209.501:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/171209.501:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/171310.126:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/171310.127:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/171358.517:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/171358.517:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/171646.111:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/171646.112:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/171721.777:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/171721.822:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/171822.768:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/171822.769:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/171904.342:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/171904.343:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/172023.711:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/172023.712:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/173438.958:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/173438.960:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/173604.775:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/173604.776:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/173742.178:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/173742.178:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/173841.271:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/173841.273:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/174021.788:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/174021.792:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/174430.984:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/174430.984:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/175535.244:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/175535.244:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/175759.082:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/175759.083:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/180640.450:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/180640.451:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/180756.685:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/180756.686:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/180943.201:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/180943.202:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/181125.356:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/181125.356:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/181142.947:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/181142.948:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/181650.296:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/181650.298:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/181827.765:INFO:CONSOLE(4)] "[object HTMLDivElement]", source: about:blank (4)
+[0520/181830.771:INFO:CONSOLE(4)] "[object HTMLSpanElement]", source: about:blank (4)
+[0520/201523.219:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/201523.220:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN

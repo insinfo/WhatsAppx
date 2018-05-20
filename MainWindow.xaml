@@ -57,15 +57,19 @@
             <TabItem Header="Configurações" Foreground="White">
                 <Grid Margin="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="43*"/>
-                        <RowDefinition Height="234*"/>
-                        <RowDefinition Height="42*"/>
-                        <RowDefinition Height="354*"/>
+                        <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBox x:Name="TxtMensagem" Margin="10,6,10,10" TextWrapping="Wrap" Grid.Row="1" BorderBrush="{x:Null}" Foreground="White" Background="#FF555555"/>
-                    <Label Content="Mensagem" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="84" Foreground="White" Height="26"/>
-                    <TextBox x:Name="TxtContatos" Margin="10" Grid.Row="3" TextWrapping="Wrap" BorderBrush="{x:Null}" Foreground="White" Background="#FF555555"/>
-                    <Label Content="Contatos" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="122" Height="26" Foreground="White"/>
+                    <Label Content="Host" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="33" Width="135" Foreground="White" FontSize="20"/>
+                    <TextBox x:Name="TxtHost" HorizontalAlignment="Left" Height="33" Margin="150,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White" FontSize="22"/>
+                    <Label Content="DataBase" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Height="33" Width="135" Foreground="White" FontSize="20"/>
+                    <TextBox x:Name="TxtDataBase" HorizontalAlignment="Left" Height="33" Margin="150,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White" FontSize="22"/>
+                    <Label Content="User" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Height="33" Width="135" Foreground="White" FontSize="20"/>
+                    <Label Content="Password" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Height="33" Width="135" Foreground="White" FontSize="20"/>
+                    <TextBox x:Name="TxtUser" HorizontalAlignment="Left" Height="33" Margin="150,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White" FontSize="22"/>
+                    <PasswordBox x:Name="TxtPassword" HorizontalAlignment="Left" Margin="150,124,0,0" VerticalAlignment="Top" Height="33" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White"/>
+                    <Label Content="UserAgent" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top" Height="33" Width="135" Foreground="White" FontSize="20"/>
+                    <TextBox x:Name="TxtUserAgent" HorizontalAlignment="Left" Height="33" Margin="150,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White" FontSize="22"/>
+                    <Button x:Name="BtnSaveSettings" Content="Salvar" HorizontalAlignment="Left" Margin="391,10,0,0" VerticalAlignment="Top" Width="229" Height="47" BorderBrush="{x:Null}" Background="#FF0480AE" Foreground="White" FontSize="20" Click="BtnSaveSettings_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>

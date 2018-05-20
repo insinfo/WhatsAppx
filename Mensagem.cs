@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace WhatsAppx
 {
-    public class Contato
+    public class Mensagem
     {
-        public string Nome { get; set; }
-        public string Telefone { get; set; }
+        public string Texto { get; set; }
+        public string Media { get; set; }
+        public string Publicada { get; set; }
     }
 }

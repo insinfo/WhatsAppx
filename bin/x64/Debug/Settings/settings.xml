@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MySettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Server>localhost</Server>
+  <Port>3306</Port>
+  <User>root</User>
+  <Password />
+  <Database>whatsappx</Database>
+  <UserAgent>Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0</UserAgent>
+</MySettings>

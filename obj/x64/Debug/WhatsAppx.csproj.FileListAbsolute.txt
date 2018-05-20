@@ -100,3 +100,10 @@ C:\MyProjectsCSharp\Whatsapp\WhatsAppx\bin\x64\Debug\CefSharp.Wpf.XML
 C:\MyProjectsCSharp\Whatsapp\WhatsAppx\bin\x64\Debug\CefSharp.OffScreen.dll
 C:\MyProjectsCSharp\Whatsapp\WhatsAppx\bin\x64\Debug\CefSharp.OffScreen.pdb
 C:\MyProjectsCSharp\Whatsapp\WhatsAppx\bin\x64\Debug\CefSharp.OffScreen.xml
+C:\MyProjectsCSharp\Whatsapp\WhatsAppx\bin\x64\Debug\MySql.Data.dll
+C:\MyProjectsCSharp\Whatsapp\WhatsAppx\bin\x64\Debug\Npgsql.dll
+C:\MyProjectsCSharp\Whatsapp\WhatsAppx\bin\x64\Debug\System.Threading.Tasks.Extensions.dll
+C:\MyProjectsCSharp\Whatsapp\WhatsAppx\bin\x64\Debug\Google.Protobuf.dll
+C:\MyProjectsCSharp\Whatsapp\WhatsAppx\bin\x64\Debug\MySql.Data.xml
+C:\MyProjectsCSharp\Whatsapp\WhatsAppx\bin\x64\Debug\Npgsql.xml
+C:\MyProjectsCSharp\Whatsapp\WhatsAppx\bin\x64\Debug\System.Threading.Tasks.Extensions.xml
