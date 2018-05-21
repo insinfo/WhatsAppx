@@ -483,3 +483,59 @@ C:\fakepath(60,24-44): warning X3571: pow(f, e) will not work for negative f, us
 [0520/181830.771:INFO:CONSOLE(4)] "[object HTMLSpanElement]", source: about:blank (4)
 [0520/201523.219:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
 [0520/201523.220:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/202857.846:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/202857.847:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/220210.413:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/220210.414:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/220243.030:INFO:CONSOLE(4)] "[object HTMLDivElement]", source: about:blank (4)
+[0520/220246.067:INFO:CONSOLE(7)] "null", source: about:blank (7)
+[0520/220246.069:INFO:CONSOLE(8)] "Uncaught TypeError: Cannot read property 'getBoundingClientRect' of null", source: about:blank (8)
+[0520/220550.565:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/220550.566:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/221523.968:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/221523.968:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/221537.161:INFO:CONSOLE(4)] "[object HTMLDivElement]", source: about:blank (4)
+[0520/221539.168:INFO:CONSOLE(4)] "[object HTMLButtonElement]", source: about:blank (4)
+[0520/221729.273:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/221729.274:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/221742.107:INFO:CONSOLE(4)] "[object HTMLDivElement]", source: about:blank (4)
+[0520/221744.113:INFO:CONSOLE(4)] "[object HTMLInputElement]", source: about:blank (4)
+[0520/222310.432:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/222310.433:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/222651.179:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/222651.180:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/222723.254:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY908;18", source: about:blank (5)
+[0520/222724.260:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY894;74", source: about:blank (5)
+[0520/222931.109:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/222931.109:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/222945.519:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY908;18", source: about:blank (5)
+[0520/222946.524:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY894;74", source: about:blank (5)
+[0520/223042.220:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/223042.220:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/223054.981:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY908;18", source: about:blank (5)
+[0520/223057.987:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY894;74", source: about:blank (5)
+[0520/223110.992:INFO:CONSOLE(4)] "[object HTMLDivElement]", source: about:blank (4)
+[0520/223114.000:INFO:CONSOLE(7)] "null", source: about:blank (7)
+[0520/223114.001:INFO:CONSOLE(8)] "Uncaught TypeError: Cannot read property 'getBoundingClientRect' of null", source: about:blank (8)
+[0520/223357.448:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/223357.449:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/223420.318:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY908;18", source: about:blank (5)
+[0520/223423.323:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY894;74", source: about:blank (5)
+[0520/223436.331:INFO:CONSOLE(4)] "[object HTMLDivElement]", source: about:blank (4)
+[0520/223439.336:INFO:CONSOLE(7)] "[object HTMLSpanElement]", source: about:blank (7)
+[0520/223841.814:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/223841.822:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/223849.540:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0520/223852.563:INFO:CONSOLE(18)] "StartChatWith Alex Programador Amorim Florindo", source: about:blank (18)
+[0520/223855.667:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0520/223858.673:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0520/223911.680:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0520/223914.686:INFO:CONSOLE(7)] "[object HTMLSpanElement]", source: about:blank (7)
+[0520/224214.519:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0520/224214.519:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0520/224232.328:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0520/224235.352:INFO:CONSOLE(18)] "StartChatWith Alex Programador Amorim Florindo", source: about:blank (18)
+[0520/224238.439:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0520/224241.445:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0520/224254.451:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0520/224257.459:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)

@@ -223,6 +223,41 @@ namespace WhatsAppx
                         Debug.WriteLine("StartChatWith " + isOk);
                     }
                 }, TaskScheduler.FromCurrentSynchronizationContext());
+                //5º anexa arquivo se tiver
+                if (mensagem.Media != null)
+                {
+                    //tempFileDialogHandler.FilePath = mensagem.Media;
+                    //aguarda 3 segundos
+                    await Task.Delay(3000);
+                    //5º opem menu anexa arquivo
+                    var task5 = mainFrame.EvaluateScriptAsync(GetBtnOpenMenuAnexoXY());
+                    await task5.ContinueWith(tas5 =>
+                    {
+                        if (!tas5.IsFaulted)
+                        {
+                            var p5 = tas5.Result.Success ? (tas5.Result.Result ?? "null") : tas5.Result.Message;
+                            Debug.WriteLine("GetBtnOpenMenuAnexoXY " + p5);
+                            //clica 
+                            TriggerClickEvent(GetPointFromObj(p5));
+                        }
+                    }, TaskScheduler.FromCurrentSynchronizationContext());
+                    //aguarda 3 segundos
+                    await Task.Delay(3000);
+                    //6º clica no botão anexa arquivo
+                    var task6 = mainFrame.EvaluateScriptAsync(GetBtnAnexaFotoXY());
+                    await task6.ContinueWith(tas6 =>
+                    {
+                        if (!tas6.IsFaulted)
+                        {
+                            var p6 = tas6.Result.Success ? (tas6.Result.Result ?? "null") : tas6.Result.Message;
+                            Debug.WriteLine("GetBtnAnexaFotoXY " + p6);
+                            //clica 
+                            TriggerClickEvent(GetPointFromObj(p6));
+                        }
+                    }, TaskScheduler.FromCurrentSynchronizationContext());
+                    //aguarda 10 segundos
+                    await Task.Delay(10000);
+                }
                 //aguarda 3 segundos
                 await Task.Delay(3000);
                 //3º obtem a posição x y da caixa mensagem 
@@ -233,19 +268,15 @@ namespace WhatsAppx
                     {
                         var p2 = tas3.Result.Success ? (tas3.Result.Result ?? "null") : tas3.Result.Message;
                         Debug.WriteLine("GetMessageInputXY " + p2);
-                     //clica na caixa de mensagem
-                     TriggerClickEvent(GetPointFromObj(p2));
-                     //digita o testo da mensagem
-                     DigitaNomeContato(mensagemTexto);
-                     //LeftMouseClick(GetPointFromObj(p2).X, GetPointFromObj(p2).Y);
+                        //clica na caixa de mensagem
+                        TriggerClickEvent(GetPointFromObj(p2));
+                        //digita o testo da mensagem
+                        DigitaNomeContato(mensagemTexto);
+                        //LeftMouseClick(GetPointFromObj(p2).X, GetPointFromObj(p2).Y);
 
                  }
                 }, TaskScheduler.FromCurrentSynchronizationContext());
-                if (mensagem.Media != null)
-                {
-
-                }
-                await Task.Delay(3000);
+                await Task.Delay(3000); 
                 //4º envia a mensagem
                 var task4 = mainFrame.EvaluateScriptAsync(GetBtnSendMessageXY());
                 await task4.ContinueWith(tas4 =>
@@ -259,6 +290,8 @@ namespace WhatsAppx
 
                     }
                 }, TaskScheduler.FromCurrentSynchronizationContext());
+                //aguarda 3 segundos
+                await Task.Delay(3000);
                 Debug.WriteLine("fim do envio da memsagem");
             }
         }                      
@@ -283,6 +316,7 @@ namespace WhatsAppx
                     element.dispatchEvent(event);
                     //console.log('executou');
                     //console.log(contatoNome);
+                    console.log('StartChatWith '+contatoInput);
                     return true;
                 }
             }
@@ -298,8 +332,10 @@ namespace WhatsAppx
             //script para pegar a posição exata do botão de pesquisa
             var scriptGetXYsearchInput = @"
                 (() => {        //retorna a posição do input de pesquisa
-                    var rect = document.querySelector('input.jN-F5').getBoundingClientRect();                
-                    return parseFloat(rect.left.toFixed(0))+';'+parseFloat(rect.top.toFixed(0)); 
+                    var elem = document.querySelector('input.jN-F5');                
+                    var xy = getPosition(elem).x + ';' + getPosition(elem).y;
+                    console.log('GetSearchInputXY ' + xy);
+                    return xy;  
                 })();
             ";
             return scriptGetXYsearchInput;
@@ -311,13 +347,58 @@ namespace WhatsAppx
             var scriptGetXYsearchInput = @"
                (() => {        //retorna a posição do input de mensagem
                 var elem = document.querySelector('._2S1VP');
-                console.log(elem);
-                /*var rect = elem.getBoundingClientRect();                 
-                return parseFloat(rect.left.toFixed(0))+';'+parseFloat(rect.top.toFixed(0));*/
-                return getPosition(elem).x + ';' + getPosition(elem).y;               
+                var xy = getPosition(elem).x + ';' + getPosition(elem).y;
+                console.log('GetMessageInputXY ' + xy);
+                return xy;               
                 })();
             ";           
             return scriptGetXYsearchInput;
+        }
+
+        public string GetBtnOpenMenuAnexoXY()
+        {            
+            var script = @"
+               (() => {       
+                var elem = document.querySelector('div[title=Anexar]');    
+                var xy = getPosition(elem).x + ';' + getPosition(elem).y;
+                console.log('GetBtnOpenMenuAnexoXY ' + xy);
+                return xy;             
+                })();
+            ";
+            return script;
+        }
+
+        public string GetBtnAnexaFotoXY()
+        {
+            var script2 = @"
+               (() => {       
+                var elem = document.querySelector('.GK4Lv span');  
+                var xy = getPosition(elem).x + ';' + getPosition(elem).y;
+                console.log('GetBtnAnexaFotoXY ' + xy);
+                return xy;              
+                })();
+            ";
+            return script2;
+        }
+
+        public string AnexaArquivoScript()
+        {
+            //script anexar arquivo
+            var scriptAnexaArquivo = @"
+               (() => {        
+                //menu anexar div[title=Anexar]
+                var event = document.createEvent('MouseEvents');
+                event.initEvent('mousedown', true, true);
+                document.querySelector('div[title=Anexar]').dispatchEvent(event);
+
+                //botão anexar foto/video .GK4Lv
+                var event = document.createEvent('MouseEvents');
+                event.initEvent('click', true, false);
+                document.querySelector('._10anr input[type=file]').dispatchEvent(event);
+                return true;
+                })();
+            ";
+            return scriptAnexaArquivo;
         }
 
         public string GetBtnSendMessageXY()
@@ -325,10 +406,13 @@ namespace WhatsAppx
             //script para pegar a posição exata do botão de eviar mensagem
             var scriptGetXYsearchInput = @"
                (() => {        //retorna a posição exata do botão de eviar mensagem
+                // btn enviar mensagem quando não tem anexo
                 var elem = document.querySelector('button._2lkdt span');
-                console.log(elem);
-                var rect = elem.getBoundingClientRect();                
-                return parseFloat(rect.left.toFixed(0))+';'+parseFloat(rect.top.toFixed(0));
+                // btn enviar mensagem quando tem anexo
+                elem = elem ? elem : document.querySelector('div._3hV1n span');               
+                var xy = getPosition(elem).x + ';' + getPosition(elem).y;
+                console.log('GetBtnSendMessageXY ' + xy);
+                return xy;              
                 })();
             ";
             return scriptGetXYsearchInput;
