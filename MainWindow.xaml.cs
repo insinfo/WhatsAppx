@@ -30,7 +30,10 @@ namespace WhatsAppx
         CefSharp.Wpf.ChromiumWebBrowser Browser;  
         TempFileDialogHandler tempFileDialogHandler;
         DBHandlerMySQL dbHandlerMySQL;
-      
+        Random randon = null;
+        IntPoint btnOpenMenuAnexoXY = null;
+        IntPoint searchInputXY = null;
+        
 
         public MySettings Settings { get; private set; }
 
@@ -50,7 +53,7 @@ namespace WhatsAppx
 
         public MainWindow()
         {
-
+            randon = new Random();
             var mySett = new MySettings();
             this.Settings = mySett.Read();
             
@@ -141,10 +144,11 @@ namespace WhatsAppx
         }
                 
         private void BtnExecute_Click(object sender, RoutedEventArgs e)
-        {           
+        {
+            TriggerClickEvent(searchInputXY);
             //var contatos = dbHandlerMySQL.GetContatos();
             //Console.WriteLine(contatos[0].Nome);
-           // Console.WriteLine(dbHandlerMySQL.GetLastMensagem().Media);
+            // Console.WriteLine(dbHandlerMySQL.GetLastMensagem().Media);
             //var script = @"(() => { console.log('sad'); var element = document.activeElement; return element.tagName; })(); ";
             /*var script = @" 
                     setTimeout(function(){ 
@@ -182,6 +186,18 @@ namespace WhatsAppx
 
             browser.GetHost().SendKeyEvent(k);*/
         }
+        public int GetTime(bool max = false,bool med = false)
+        {
+            if (max)
+            {
+                return randon.Next(10000, 14000);
+            }
+            if (med)
+            {
+                return randon.Next(10000, 14000);
+            }
+            return randon.Next(1550, 3850);
+        }
 
         private async void BtnColar_Click(object sender, RoutedEventArgs e)
         {
@@ -205,14 +221,15 @@ namespace WhatsAppx
                     {
                         var p1 = tas1.Result.Success ? (tas1.Result.Result ?? "null") : tas1.Result.Message;
                         Debug.WriteLine("GetSearchInputXY " + p1);
-                    //clica na caixa de pesquisa
-                    TriggerClickEvent(GetPointFromObj(p1));
-                    //digita o nome do contato
-                    DigitaNomeContato(nomeContato);
+                        //clica na caixa de pesquisa
+                        searchInputXY = GetPointFromObj(p1);
+                        TriggerClickEvent(searchInputXY);                      
+                        //digita o nome do contato
+                        DigitaNomeContato(nomeContato);
                     }
                 }, TaskScheduler.FromCurrentSynchronizationContext());
                 //aguarda 3 segundos
-                await Task.Delay(3000);
+                await Task.Delay(GetTime());
                 //2º inicia o chat
                 var task2 = mainFrame.EvaluateScriptAsync(StartChatWith(nomeContato));
                 await task2.ContinueWith(tas2 =>
@@ -223,12 +240,13 @@ namespace WhatsAppx
                         Debug.WriteLine("StartChatWith " + isOk);
                     }
                 }, TaskScheduler.FromCurrentSynchronizationContext());
+               
                 //5º anexa arquivo se tiver
                 if (mensagem.Media != null)
                 {
                     //tempFileDialogHandler.FilePath = mensagem.Media;
                     //aguarda 3 segundos
-                    await Task.Delay(3000);
+                    await Task.Delay(GetTime());
                     //5º opem menu anexa arquivo
                     var task5 = mainFrame.EvaluateScriptAsync(GetBtnOpenMenuAnexoXY());
                     await task5.ContinueWith(tas5 =>
@@ -238,11 +256,12 @@ namespace WhatsAppx
                             var p5 = tas5.Result.Success ? (tas5.Result.Result ?? "null") : tas5.Result.Message;
                             Debug.WriteLine("GetBtnOpenMenuAnexoXY " + p5);
                             //clica 
-                            TriggerClickEvent(GetPointFromObj(p5));
+                            btnOpenMenuAnexoXY = GetPointFromObj(p5);
+                            TriggerClickEvent(btnOpenMenuAnexoXY);
                         }
                     }, TaskScheduler.FromCurrentSynchronizationContext());
                     //aguarda 3 segundos
-                    await Task.Delay(3000);
+                    await Task.Delay(GetTime());
                     //6º clica no botão anexa arquivo
                     var task6 = mainFrame.EvaluateScriptAsync(GetBtnAnexaFotoXY());
                     await task6.ContinueWith(tas6 =>
@@ -256,10 +275,10 @@ namespace WhatsAppx
                         }
                     }, TaskScheduler.FromCurrentSynchronizationContext());
                     //aguarda 10 segundos
-                    await Task.Delay(10000);
+                    await Task.Delay(GetTime(true));
                 }
                 //aguarda 3 segundos
-                await Task.Delay(3000);
+                await Task.Delay(GetTime());
                 //3º obtem a posição x y da caixa mensagem 
                 var task3 = mainFrame.EvaluateScriptAsync(GetMessageInputXY());
                 await task3.ContinueWith(tas3 =>
@@ -273,10 +292,9 @@ namespace WhatsAppx
                         //digita o testo da mensagem
                         DigitaNomeContato(mensagemTexto);
                         //LeftMouseClick(GetPointFromObj(p2).X, GetPointFromObj(p2).Y);
-
                  }
                 }, TaskScheduler.FromCurrentSynchronizationContext());
-                await Task.Delay(3000); 
+                await Task.Delay(GetTime()); 
                 //4º envia a mensagem
                 var task4 = mainFrame.EvaluateScriptAsync(GetBtnSendMessageXY());
                 await task4.ContinueWith(tas4 =>
@@ -285,14 +303,17 @@ namespace WhatsAppx
                     {
                         var p3 = tas4.Result.Success ? (tas4.Result.Result ?? "null") : tas4.Result.Message;
                         Debug.WriteLine("GetBtnSendMessageXY " + p3);
-                    //clica nno botão de envio de mensagem
-                    TriggerClickEvent(GetPointFromObj(p3));
-
+                        //clica no botão de envio de mensagem
+                        TriggerClickEvent(GetPointFromObj(p3)); 
                     }
                 }, TaskScheduler.FromCurrentSynchronizationContext());
-                //aguarda 3 segundos
                 await Task.Delay(3000);
-                Debug.WriteLine("fim do envio da memsagem");
+                Debug.WriteLine("fexa o menu " + btnOpenMenuAnexoXY.X + ";" + btnOpenMenuAnexoXY.Y);
+                TriggerClickEvent(btnOpenMenuAnexoXY);
+                //aguarda 3 segundos
+                await Task.Delay(GetTime(false,true));
+                TriggerClickEvent(searchInputXY);
+                Debug.WriteLine("fim do envio da memsagem");                
             }
         }                      
 
@@ -459,8 +480,7 @@ namespace WhatsAppx
             host.SendMouseClickEvent(p.X, p.Y, MouseButtonType.Left, false, 1, CefEventFlags.None);
             host.SendMouseClickEvent(p.X, p.Y, MouseButtonType.Left, true, 1, CefEventFlags.None);
         }
-
-
+        
         /***************** UTILS ********************/
 
         public IntPoint GetPointFromObj(object str)

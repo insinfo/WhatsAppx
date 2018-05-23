@@ -539,3 +539,437 @@ C:\fakepath(60,24-44): warning X3571: pow(f, e) will not work for negative f, us
 [0520/224241.445:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
 [0520/224254.451:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
 [0520/224257.459:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/201214.383:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/201214.384:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/201957.373:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/202000.395:INFO:CONSOLE(18)] "StartChatWith Alex Programador Amorim Florindo", source: about:blank (18)
+[0522/202003.445:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/202006.451:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/202019.458:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/202022.466:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/202025.472:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/202028.479:INFO:CONSOLE(18)] "StartChatWith Mauricinho Tel Desconhecido", source: about:blank (18)
+[0522/202031.535:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/202034.540:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/202047.547:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/202050.554:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/202700.724:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[0522/202700.724:ERROR:cache_util.cc(134)] Unable to move cache folder C:\Users\Isaque\AppData\Local\CEF\GPUCache to C:\Users\Isaque\AppData\Local\CEF\old_GPUCache_000
+[0522/202700.725:ERROR:disk_cache.cc(169)] Unable to create cache
+[0522/202700.725:ERROR:shader_disk_cache.cc(601)] Shader Cache Creation failed: -2
+[0522/202702.748:ERROR:service_worker_storage.cc(1953)] Failed to delete the database: Database operation failed
+[0522/202702.752:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[0522/202702.752:ERROR:cache_util.cc(134)] Unable to move cache folder C:\Users\Isaque\AppData\Local\CEF\Cache to C:\Users\Isaque\AppData\Local\CEF\old_Cache_000
+[0522/202702.752:ERROR:disk_cache.cc(169)] Unable to create cache
+[0522/202711.890:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/202711.893:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/202712.288:ERROR:leveldb_database.cc(311)] Failed to open LevelDB database from C:\Users\Isaque\AppData\Local\CEF\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb,IO error: C:\Users\Isaque\AppData\Local\CEF\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/202712.288:ERROR:indexed_db_backing_store.cc(951)] Unable to open backing store, not trying to recover - IO error: C:\Users\Isaque\AppData\Local\CEF\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/202712.433:ERROR:sandbox_origin_database.cc(195)] SandboxOriginDatabase failed at: Init@../../storage/browser/fileapi/sandbox_origin_database.cc:94 with error: IO error: C:\Users\Isaque\AppData\Local\CEF\File System\Origins/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/202712.433:WARNING:sandbox_origin_database.cc(106)] Attempting to repair SandboxOriginDatabase.
+[0522/202714.312:ERROR:leveldb_database.cc(311)] Failed to open LevelDB database from C:\Users\Isaque\AppData\Local\CEF\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb,IO error: C:\Users\Isaque\AppData\Local\CEF\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/202714.312:ERROR:indexed_db_backing_store.cc(951)] Unable to open backing store, not trying to recover - IO error: C:\Users\Isaque\AppData\Local\CEF\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/202714.895:WARNING:value_store_frontend.cc(42)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/202716.592:WARNING:sandbox_origin_database.cc(137)] Failed to repair SandboxOriginDatabase.
+[0522/202718.612:ERROR:sandbox_origin_database.cc(195)] SandboxOriginDatabase failed at: Init@../../storage/browser/fileapi/sandbox_origin_database.cc:94 with error: IO error: C:\Users\Isaque\AppData\Local\CEF\File System\Origins/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/202718.612:WARNING:sandbox_origin_database.cc(106)] Attempting to repair SandboxOriginDatabase.
+[0522/202722.895:WARNING:sandbox_origin_database.cc(137)] Failed to repair SandboxOriginDatabase.
+[0522/202724.899:ERROR:sandbox_origin_database.cc(195)] SandboxOriginDatabase failed at: Init@../../storage/browser/fileapi/sandbox_origin_database.cc:94 with error: IO error: C:\Users\Isaque\AppData\Local\CEF\File System\Origins/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/202724.899:WARNING:sandbox_origin_database.cc(106)] Attempting to repair SandboxOriginDatabase.
+[0522/202728.989:WARNING:sandbox_origin_database.cc(137)] Failed to repair SandboxOriginDatabase.
+[0522/202731.010:ERROR:sandbox_origin_database.cc(195)] SandboxOriginDatabase failed at: Init@../../storage/browser/fileapi/sandbox_origin_database.cc:94 with error: IO error: C:\Users\Isaque\AppData\Local\CEF\File System\Origins/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/202731.010:WARNING:sandbox_origin_database.cc(106)] Attempting to repair SandboxOriginDatabase.
+[0522/202735.093:WARNING:sandbox_origin_database.cc(137)] Failed to repair SandboxOriginDatabase.
+[0522/203006.503:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/203012.529:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 0;0", source: about:blank (5)
+[0522/203015.533:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 0;0", source: about:blank (5)
+[0522/203028.538:INFO:CONSOLE(5)] "GetMessageInputXY 0;0", source: about:blank (5)
+[0522/203031.544:INFO:CONSOLE(8)] "GetBtnSendMessageXY 0;0", source: about:blank (8)
+[0522/203034.548:INFO:CONSOLE(5)] "GetSearchInputXY 65;74", source: about:blank (5)
+[0522/203040.563:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 0;0", source: about:blank (5)
+[0522/203043.567:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 0;0", source: about:blank (5)
+[0522/203056.571:INFO:CONSOLE(5)] "GetMessageInputXY 0;0", source: about:blank (5)
+[0522/203059.576:INFO:CONSOLE(8)] "GetBtnSendMessageXY 0;0", source: about:blank (8)
+[0522/203102.580:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/203108.585:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 0;0", source: about:blank (5)
+[0522/203111.589:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 0;0", source: about:blank (5)
+[0522/203124.594:INFO:CONSOLE(5)] "GetMessageInputXY 0;0", source: about:blank (5)
+[0522/203127.598:INFO:CONSOLE(8)] "GetBtnSendMessageXY 0;0", source: about:blank (8)
+[0522/203248.810:INFO:CONSOLE(62)] "Uncaught (in promise) NotSupportedError: The element has no supported sources.", source: https://web.whatsapp.com/app2.dc7b5d4ae9c57e0dbe56.js (62)
+[0522/203339.037:INFO:CONSOLE(62)] "Uncaught (in promise) NotSupportedError: The element has no supported sources.", source: https://web.whatsapp.com/app2.dc7b5d4ae9c57e0dbe56.js (62)
+[0522/203452.359:INFO:CONSOLE(62)] "Uncaught (in promise) NotSupportedError: The element has no supported sources.", source: https://web.whatsapp.com/app2.dc7b5d4ae9c57e0dbe56.js (62)
+[0522/203501.068:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/203507.075:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 0;0", source: about:blank (5)
+[0522/203510.079:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 0;0", source: about:blank (5)
+[0522/203523.084:INFO:CONSOLE(5)] "GetMessageInputXY 0;0", source: about:blank (5)
+[0522/203526.088:INFO:CONSOLE(8)] "GetBtnSendMessageXY 0;0", source: about:blank (8)
+[0522/203527.165:ERROR:media_internals.cc(102)] Cannot get RenderProcessHost
+[0522/203532.176:ERROR:cookie_monster.cc(1253)] Found 1 duplicate cookies for host='whatsapp.com', with {name='ref', domain='.web.whatsapp.com', path='/pp'}
+[0522/203532.176:ERROR:cookie_monster.cc(1253)] Found 1 duplicate cookies for host='whatsapp.com', with {name='tok', domain='.web.whatsapp.com', path='/pp'}
+[0522/203533.136:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/203533.136:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/203601.811:ERROR:connection.cc(1947)] Quota sqlite error 5, errno 33: database is locked, sql: COMMIT
+[0522/203601.811:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/203632.537:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/203642.760:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/203648.789:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 0;0", source: about:blank (5)
+[0522/203651.793:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 0;0", source: about:blank (5)
+[0522/203704.799:INFO:CONSOLE(5)] "GetMessageInputXY 0;0", source: about:blank (5)
+[0522/203707.252:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/203707.805:INFO:CONSOLE(8)] "GetBtnSendMessageXY 0;0", source: about:blank (8)
+[0522/203710.810:INFO:CONSOLE(5)] "GetSearchInputXY 65;74", source: about:blank (5)
+[0522/203716.817:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 0;0", source: about:blank (5)
+[0522/203719.821:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 0;0", source: about:blank (5)
+[0522/203732.826:INFO:CONSOLE(5)] "GetMessageInputXY 0;0", source: about:blank (5)
+[0522/203735.829:INFO:CONSOLE(8)] "GetBtnSendMessageXY 0;0", source: about:blank (8)
+[0522/203739.225:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/203813.161:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/205423.046:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[0522/205423.046:ERROR:cache_util.cc(134)] Unable to move cache folder C:\Users\Isaque\AppData\Local\CEF\GPUCache to C:\Users\Isaque\AppData\Local\CEF\old_GPUCache_000
+[0522/205423.046:ERROR:disk_cache.cc(169)] Unable to create cache
+[0522/205423.046:ERROR:shader_disk_cache.cc(601)] Shader Cache Creation failed: -2
+[0522/205425.073:ERROR:service_worker_storage.cc(1953)] Failed to delete the database: Database operation failed
+[0522/205425.077:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[0522/205425.077:ERROR:cache_util.cc(134)] Unable to move cache folder C:\Users\Isaque\AppData\Local\CEF\Cache to C:\Users\Isaque\AppData\Local\CEF\old_Cache_000
+[0522/205425.077:ERROR:disk_cache.cc(169)] Unable to create cache
+[0522/205434.147:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/205434.151:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/205434.543:ERROR:leveldb_database.cc(311)] Failed to open LevelDB database from C:\Users\Isaque\AppData\Local\CEF\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb,IO error: C:\Users\Isaque\AppData\Local\CEF\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/205434.543:ERROR:indexed_db_backing_store.cc(951)] Unable to open backing store, not trying to recover - IO error: C:\Users\Isaque\AppData\Local\CEF\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/205434.697:ERROR:sandbox_origin_database.cc(195)] SandboxOriginDatabase failed at: Init@../../storage/browser/fileapi/sandbox_origin_database.cc:94 with error: IO error: C:\Users\Isaque\AppData\Local\CEF\File System\Origins/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/205434.697:WARNING:sandbox_origin_database.cc(106)] Attempting to repair SandboxOriginDatabase.
+[0522/205436.555:ERROR:leveldb_database.cc(311)] Failed to open LevelDB database from C:\Users\Isaque\AppData\Local\CEF\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb,IO error: C:\Users\Isaque\AppData\Local\CEF\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/205436.555:ERROR:indexed_db_backing_store.cc(951)] Unable to open backing store, not trying to recover - IO error: C:\Users\Isaque\AppData\Local\CEF\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/205437.144:WARNING:value_store_frontend.cc(42)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/205438.956:WARNING:sandbox_origin_database.cc(137)] Failed to repair SandboxOriginDatabase.
+[0522/205440.971:ERROR:sandbox_origin_database.cc(195)] SandboxOriginDatabase failed at: Init@../../storage/browser/fileapi/sandbox_origin_database.cc:94 with error: IO error: C:\Users\Isaque\AppData\Local\CEF\File System\Origins/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/205440.971:WARNING:sandbox_origin_database.cc(106)] Attempting to repair SandboxOriginDatabase.
+[0522/205445.052:WARNING:sandbox_origin_database.cc(137)] Failed to repair SandboxOriginDatabase.
+[0522/205447.063:ERROR:sandbox_origin_database.cc(195)] SandboxOriginDatabase failed at: Init@../../storage/browser/fileapi/sandbox_origin_database.cc:94 with error: IO error: C:\Users\Isaque\AppData\Local\CEF\File System\Origins/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/205447.063:WARNING:sandbox_origin_database.cc(106)] Attempting to repair SandboxOriginDatabase.
+[0522/205451.134:WARNING:sandbox_origin_database.cc(137)] Failed to repair SandboxOriginDatabase.
+[0522/205453.144:ERROR:sandbox_origin_database.cc(195)] SandboxOriginDatabase failed at: Init@../../storage/browser/fileapi/sandbox_origin_database.cc:94 with error: IO error: C:\Users\Isaque\AppData\Local\CEF\File System\Origins/LOCK: No further details. (ChromeMethodBFE: 15::LockFile::1)
+[0522/205453.144:WARNING:sandbox_origin_database.cc(106)] Attempting to repair SandboxOriginDatabase.
+[0522/205457.212:WARNING:sandbox_origin_database.cc(137)] Failed to repair SandboxOriginDatabase.
+[0522/205513.782:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/205516.806:INFO:CONSOLE(18)] "StartChatWith Alex Programador", source: about:blank (18)
+[0522/205519.909:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/205520.214:WARNING:angle_platform_impl.cc(51)] rx::HLSLCompiler::compileToBinary(228): 
+C:\fakepath(60,10-53): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+
+[0522/205520.227:WARNING:angle_platform_impl.cc(51)] rx::HLSLCompiler::compileToBinary(228): 
+C:\fakepath(60,24-44): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+
+[0522/205522.914:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/205535.919:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/205538.924:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/205541.929:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/205544.934:INFO:CONSOLE(18)] "StartChatWith Luciano Macário 2", source: about:blank (18)
+[0522/205545.418:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/205545.418:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/205546.496:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/205546.496:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/205548.005:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/205551.009:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/205604.014:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/205607.020:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/210933.415:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/210933.417:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/210946.525:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/210948.372:INFO:CONSOLE(18)] "StartChatWith Alex Programador", source: about:blank (18)
+[0522/210952.273:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/210953.998:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/210959.540:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/211002.215:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/211005.045:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/211010.637:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/211013.531:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/211018.316:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/211020.821:INFO:CONSOLE(8)] "GetBtnSendMessageXY 963;561", source: about:blank (8)
+[0522/211419.093:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/211419.094:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/211436.962:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/211440.742:INFO:CONSOLE(18)] "StartChatWith Alex Programador", source: about:blank (18)
+[0522/211442.984:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/211445.051:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/211501.197:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/211504.766:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/211517.965:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/211523.704:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/211526.186:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/211542.088:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/211545.390:INFO:CONSOLE(8)] "GetBtnSendMessageXY 963;561", source: about:blank (8)
+[0522/212340.281:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/212340.282:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/212353.967:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/212356.500:INFO:CONSOLE(18)] "StartChatWith Alex Programador", source: about:blank (18)
+[0522/212358.404:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/212401.790:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/212417.133:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/212419.869:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/212431.736:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/212436.820:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/212438.945:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/212705.950:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/212705.951:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/212715.855:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/212718.050:INFO:CONSOLE(18)] "StartChatWith Alex Programador", source: about:blank (18)
+[0522/212720.388:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/212723.994:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/212739.466:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/212742.818:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/212944.335:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/212944.336:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/213030.973:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/213033.978:INFO:CONSOLE(18)] "StartChatWith Mauricinho Tel Desconhecido", source: about:blank (18)
+[0522/213035.900:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/213039.014:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/213053.672:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/213057.153:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/213329.031:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/213329.032:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/213335.217:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/213337.151:INFO:CONSOLE(18)] "StartChatWith Mauricinho Tel Desconhecido", source: about:blank (18)
+[0522/213339.200:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/213341.620:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/213357.805:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/213400.043:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/213713.035:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/213713.037:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/213740.909:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/213740.909:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/213758.608:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/213802.439:INFO:CONSOLE(18)] "StartChatWith Mauricinho Tel Desconhecido", source: about:blank (18)
+[0522/213805.088:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/213806.830:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/213822.201:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/213825.840:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/214044.826:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/214044.827:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/214051.669:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/214054.494:INFO:CONSOLE(18)] "StartChatWith Mauricinho Tel Desconhecido", source: about:blank (18)
+[0522/214056.465:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/214058.586:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/214114.228:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/214116.564:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/214354.913:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/214354.914:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/214401.040:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/214404.454:INFO:CONSOLE(18)] "StartChatWith Mauricinho Tel Desconhecido", source: about:blank (18)
+[0522/214408.149:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/214409.967:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/214426.273:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/214429.788:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/214553.243:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/214553.246:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/214610.213:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/214611.946:INFO:CONSOLE(18)] "StartChatWith Mauricinho Tel Desconhecido", source: about:blank (18)
+[0522/214613.722:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/214615.838:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/214630.122:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/214633.766:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/214647.476:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/214649.106:INFO:CONSOLE(18)] "StartChatWith Luciano Macario 2", source: about:blank (18)
+[0522/214652.152:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/214654.414:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/214707.915:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/214710.100:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/222143.382:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0522/222143.383:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0522/222240.758:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/222243.306:INFO:CONSOLE(18)] "StartChatWith Mauricinho Tel Desconhecido", source: about:blank (18)
+[0522/222246.595:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/222248.985:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/222305.976:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/222309.291:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/222323.231:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/222326.901:INFO:CONSOLE(18)] "StartChatWith Luciano Macario 2", source: about:blank (18)
+[0522/222330.672:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/222333.132:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/222348.338:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/222350.494:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/222558.536:ERROR:connection.cc(1947)] Quota sqlite error 5, errno 33: database is locked, sql: COMMIT
+[0522/222558.536:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/222632.308:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/222718.281:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/222752.940:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/222816.221:INFO:CONSOLE(5)] "GetSearchInputXY 65;74", source: about:blank (5)
+[0522/222819.916:INFO:CONSOLE(18)] "StartChatWith Mauricinho Tel Desconhecido", source: about:blank (18)
+[0522/222822.873:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/222826.602:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/222839.820:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/222843.274:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/222845.493:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/222900.112:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/222901.775:INFO:CONSOLE(18)] "StartChatWith Luciano Macario 2", source: about:blank (18)
+[0522/222905.007:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/222907.264:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/222916.834:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/222922.355:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/222926.162:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/222941.448:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/222943.445:INFO:CONSOLE(18)] "StartChatWith Alex Programador", source: about:blank (18)
+[0522/222945.179:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/222947.461:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/222949.339:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223003.124:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/223005.314:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/223020.089:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/223021.602:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223023.608:INFO:CONSOLE(18)] "StartChatWith Luciano Macario 2", source: about:blank (18)
+[0522/223026.867:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/223030.339:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/223043.649:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/223045.993:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/223051.700:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223121.854:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223155.093:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223226.522:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223302.568:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223339.800:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223430.678:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223503.207:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223535.782:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223610.719:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223642.092:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223728.827:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/223730.635:INFO:CONSOLE(18)] "StartChatWith Mauricinho Tel Desconhecido", source: about:blank (18)
+[0522/223733.010:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223733.860:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/223736.673:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/223748.947:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/223752.562:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/223807.440:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223808.206:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/223810.827:INFO:CONSOLE(18)] "StartChatWith Luciano Macario 2", source: about:blank (18)
+[0522/223813.961:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/223816.497:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/223833.600:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/223836.353:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/223839.164:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223850.853:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/223852.460:INFO:CONSOLE(18)] "StartChatWith Alex Programador", source: about:blank (18)
+[0522/223854.179:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/223857.118:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/223909.429:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223913.605:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/223916.697:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/223932.629:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/223936.230:INFO:CONSOLE(18)] "StartChatWith Luciano Macario 2", source: about:blank (18)
+[0522/223938.008:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/223941.658:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/223945.163:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/223959.307:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/224001.311:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/224014.622:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/224018.182:INFO:CONSOLE(18)] "StartChatWith Alex Programador", source: about:blank (18)
+[0522/224020.015:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/224022.074:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/224022.451:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224037.075:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/224039.329:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/224052.716:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224056.108:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/224057.666:INFO:CONSOLE(18)] "StartChatWith Luciano Macario 2", source: about:blank (18)
+[0522/224100.979:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/224103.003:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/224118.245:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/224121.891:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/224127.463:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224201.972:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224236.253:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224308.962:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224345.092:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224424.710:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224500.355:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224555.394:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224629.941:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224702.850:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224742.718:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224821.075:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224855.157:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224925.228:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/224958.456:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225037.078:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225107.750:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225148.991:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225230.590:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225313.014:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225345.608:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225423.821:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225511.836:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225558.029:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225621.879:INFO:CONSOLE(5)] "GetSearchInputXY 65;74", source: about:blank (5)
+[0522/225624.339:INFO:CONSOLE(18)] "StartChatWith Mauricinho Tel Desconhecido", source: about:blank (18)
+[0522/225627.951:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/225629.768:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/225642.384:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225643.805:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/225645.523:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/225701.867:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/225704.960:INFO:CONSOLE(18)] "StartChatWith Luciano Macario 2", source: about:blank (18)
+[0522/225707.071:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/225709.355:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/225715.825:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225725.743:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/225729.422:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/225743.332:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/225746.358:INFO:CONSOLE(18)] "StartChatWith Alex Programador", source: about:blank (18)
+[0522/225747.365:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225749.410:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/225751.478:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/225804.758:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/225807.669:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/225821.325:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225823.040:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/225825.906:INFO:CONSOLE(18)] "StartChatWith Luciano Macario 2", source: about:blank (18)
+[0522/225827.965:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/225830.090:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/225844.089:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/225846.650:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/225851.476:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225859.758:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/225902.024:INFO:CONSOLE(18)] "StartChatWith Alex Programador", source: about:blank (18)
+[0522/225904.522:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/225908.173:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/225913.211:INFO:CONSOLE(62)] "Uncaught (in promise) NotSupportedError: The element has no supported sources.", source: https://web.whatsapp.com/app2.dc7b5d4ae9c57e0dbe56.js (62)
+[0522/225921.848:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/225924.284:INFO:CONSOLE(5)] "GetMessageInputXY 429;562", source: about:blank (5)
+[0522/225928.139:INFO:CONSOLE(8)] "GetBtnSendMessageXY 0;0", source: about:blank (8)
+[0522/225943.151:INFO:CONSOLE(5)] "GetSearchInputXY 65;74", source: about:blank (5)
+[0522/225948.555:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/225951.906:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/225952.640:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/230004.662:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/230006.772:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/230020.601:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/230022.651:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/230024.185:INFO:CONSOLE(18)] "StartChatWith Alex Programador", source: about:blank (18)
+[0522/230027.837:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/230031.154:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/230046.853:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/230050.065:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/230055.201:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/230104.533:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/230106.371:INFO:CONSOLE(18)] "StartChatWith Alex Programador", source: about:blank (18)
+[0522/230110.210:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/230113.715:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/230126.200:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/230127.571:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/230129.462:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/230145.755:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/230148.883:INFO:CONSOLE(18)] "StartChatWith Alex Programador", source: about:blank (18)
+[0522/230152.439:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/230155.585:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/230156.678:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/230210.788:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/230214.223:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/230226.758:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/230228.677:INFO:CONSOLE(5)] "GetSearchInputXY 65;73", source: about:blank (5)
+[0522/230232.157:INFO:CONSOLE(18)] "StartChatWith Alex Programador", source: about:blank (18)
+[0522/230234.648:INFO:CONSOLE(5)] "GetBtnOpenMenuAnexoXY 908;18", source: about:blank (5)
+[0522/230236.485:INFO:CONSOLE(5)] "GetBtnAnexaFotoXY 894;74", source: about:blank (5)
+[0522/230253.853:INFO:CONSOLE(5)] "GetMessageInputXY 434;411", source: about:blank (5)
+[0522/230256.923:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
+[0522/230257.072:INFO:CONSOLE(8)] "GetBtnSendMessageXY 922;469", source: about:blank (8)
+[0522/230327.416:ERROR:connection.cc(1947)] Quota sqlite error 1, errno 33: cannot start a transaction within a transaction, sql: BEGIN TRANSACTION
