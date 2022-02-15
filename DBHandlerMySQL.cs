@@ -33,21 +33,21 @@ namespace WhatsAppx
         }
 
         //Inserir registros
-        public void InsertObj(object valueObject)
+        public void InsertObj(object valueObject,string tableNameIn =null)
         {
             try
             {
                 //abre a conexao
                 Connection.Open();
                 //string cmdInserir = $"Insert Into Noticias(nome,email,idade) values('{0}','{1}',{2})";
-                var tableName = valueObject.GetType().Name+"s";
+                var tableName = tableNameIn == null ? valueObject.GetType().Name.ToLower()+ "s"  : tableNameIn;
                 string sql = $"Insert Into {tableName} (";
                 PropertyInfo[] properties = valueObject.GetType().GetProperties();
                 var values = "";
                 foreach (var property in properties)
                 {
                     //Console.WriteLine(property.Name);
-                    sql += "" + property.Name + ",";
+                    sql += "" + property.Name.ToLower() + ",";
                     values += "'" + property.GetValue(valueObject).ToString().Replace("'", "\"") + "',";
                 }
                 sql = sql.Remove(sql.Length - 1);
@@ -79,11 +79,65 @@ namespace WhatsAppx
             }
         }
 
-        public List<Contato> GetContatos()
+        public void UpdateObject(object valueObject,int id, string tableNameIn = null)
         {
             try
             {
-                var query = @"SELECT * FROM  contatos ";
+                //abre a conexao
+                Connection.Open();
+                //string cmdInserir = $"Insert Into Noticias(nome,email,idade) values('{0}','{1}',{2})";
+                var tableName = tableNameIn == null ? valueObject.GetType().Name.ToLower() + "s" : tableNameIn;
+                string sql = $"UPDATE {tableName} SET ";
+                PropertyInfo[] properties = valueObject.GetType().GetProperties();
+
+                foreach (var property in properties)
+                {
+                    var prop = property.Name.ToLower();
+                    var val = property.GetValue(valueObject).ToString();
+
+                    if(prop == "enviou")
+                    {
+                        Debug.WriteLine(val);
+                        val = val == "True" ? "1" : "2";
+                        Debug.WriteLine(val);
+                    }
+
+                    if (prop != "id") {
+                        sql += "" + prop + "='" + val + "',";
+                    }
+                }
+                sql = sql.Remove(sql.Length - 1);                
+                sql += " WHERE id='"+ id.ToString() +"'";
+
+                Console.WriteLine(sql);
+                
+                //Se estiver aberta insere os dados na BD
+                MySqlCommand commS = new MySqlCommand(sql, Connection);
+                //commS.BeginExecuteNonQuery();
+                var reseut =commS.ExecuteNonQuery();
+                Console.WriteLine(reseut.ToString());
+            }
+            catch (MySqlException ex)
+            {
+                //throw ex;
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
+        public List<Contato> GetContatos(string device)
+        {
+            try
+            {
+                var query = @"SELECT * FROM contatos WHERE device='"+device+"' and enviou='0'";
                 Connection.Open();
                 //verificva se a conexão esta aberta
                 if (Connection.State == ConnectionState.Open)
@@ -96,7 +150,50 @@ namespace WhatsAppx
                     List<Contato> list = new List<Contato> ();
                     foreach (DataRow row in dtsource.Rows)
                     {
-                        list.Add(new Contato (){ Nome= row["nome"].ToString().Trim(), Telefone= row["telefone"].ToString().Trim() });
+                        bool enviou = row["enviou"].ToString() == "1" ? true : false;
+                        int id = Convert.ToInt32(row["id"]);
+                        list.Add(new Contato (){Id=id, Nome= row["nome"].ToString().Trim(), Telefone= row["telefone"].ToString().Trim(), Device = row["device"].ToString(), Enviou = enviou });
+                    }
+                    return list;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                //throw ex;
+                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Connection.Close();
+            }
+            return null;
+        }
+
+        public List<string> GetDevices()
+        {
+            try
+            {
+                var query = @"SELECT DISTINCT device FROM `contatos`";
+                Connection.Open();
+                //verificva se a conexão esta aberta
+                if (Connection.State == ConnectionState.Open)
+                {
+                    //cria um adapter usando a instrução SQL para acessar a tabela contatos
+                    mAdapter = new MySqlDataAdapter(query, Connection);
+                    //preenche o dataset via adapter
+                    mAdapter.Fill(mDataSet, "devices");
+                    var dtsource = mDataSet.Tables["devices"];
+                    List<string> list = new List<string>();
+                    foreach (DataRow row in dtsource.Rows)
+                    {                       
+                        list.Add(row["device"].ToString());
                     }
                     return list;
                 }

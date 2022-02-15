@@ -1,4 +1,4 @@
-﻿<Window x:Class="WhatsAppx.MainWindow"
+﻿<Window x:Name="main" x:Class="WhatsAppx.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -60,20 +60,31 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <Label Content="Host" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="33" Width="135" Foreground="White" FontSize="20"/>
-                    <TextBox x:Name="TxtHost" HorizontalAlignment="Left" Height="33" Margin="150,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White" FontSize="22"/>
+                    <TextBox x:Name="TxtHost" HorizontalAlignment="Left" Height="33" Margin="173,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White" FontSize="22"/>
                     <Label Content="DataBase" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Height="33" Width="135" Foreground="White" FontSize="20"/>
-                    <TextBox x:Name="TxtDataBase" HorizontalAlignment="Left" Height="33" Margin="150,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White" FontSize="22"/>
+                    <TextBox x:Name="TxtDataBase" HorizontalAlignment="Left" Height="33" Margin="173,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White" FontSize="22"/>
                     <Label Content="User" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Height="33" Width="135" Foreground="White" FontSize="20"/>
                     <Label Content="Password" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Height="33" Width="135" Foreground="White" FontSize="20"/>
-                    <TextBox x:Name="TxtUser" HorizontalAlignment="Left" Height="33" Margin="150,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White" FontSize="22"/>
-                    <PasswordBox x:Name="TxtPassword" HorizontalAlignment="Left" Margin="150,124,0,0" VerticalAlignment="Top" Height="33" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White"/>
+                    <TextBox x:Name="TxtUser" HorizontalAlignment="Left" Height="33" Margin="173,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White" FontSize="22"/>
+                    <PasswordBox x:Name="TxtPassword" HorizontalAlignment="Left" Margin="173,124,0,0" VerticalAlignment="Top" Height="33" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White"/>
                     <Label Content="UserAgent" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top" Height="33" Width="135" Foreground="White" FontSize="20"/>
-                    <TextBox x:Name="TxtUserAgent" HorizontalAlignment="Left" Height="33" Margin="150,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White" FontSize="22"/>
-                    <Button x:Name="BtnSaveSettings" Content="Salvar" HorizontalAlignment="Left" Margin="391,10,0,0" VerticalAlignment="Top" Width="229" Height="47" BorderBrush="{x:Null}" Background="#FF0480AE" Foreground="White" FontSize="20" Click="BtnSaveSettings_Click"/>
+                    <Button x:Name="BtnSaveSettings" Content="Salvar" HorizontalAlignment="Left" Margin="456,10,0,0" VerticalAlignment="Top" Width="229" Height="47" BorderBrush="{x:Null}" Background="#FF0480AE" Foreground="White" FontSize="20" Click="BtnSaveSettings_Click"/>
+                    <Label Content="Device" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Height="33" Width="135" Foreground="White" FontSize="20"/>
+                    <Label Content="Limit" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" Height="33" Width="135" Foreground="White" FontSize="20"/>
+                    <TextBox x:Name="TxtLimit" HorizontalAlignment="Left" Height="33" Margin="173,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White" FontSize="22"/>
+                    <ComboBox x:Name="TxtUserAgent" HorizontalAlignment="Left" Margin="173,162,0,0" VerticalAlignment="Top" Width="218" Height="33" Background="Black" BorderBrush="{x:Null}" Foreground="#FFEC5A5A"/>
+                    <ComboBox x:Name="TxtDevice" HorizontalAlignment="Left" Margin="173,202,0,0" VerticalAlignment="Top" Width="218" Height="33"/>
+                    <Label Content="SendIntervalMin" HorizontalAlignment="Left" Margin="10,276,0,0" VerticalAlignment="Top" Height="33" Width="159" Foreground="White" FontSize="20"/>
+                    <TextBox x:Name="TxtSendIntervalMin" HorizontalAlignment="Left" Height="33" Margin="173,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White" FontSize="22"/>
+                    <Label Content="SendIntervalMax" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" Height="33" Width="159" Foreground="White" FontSize="20"/>
+                    <TextBox x:Name="TxtSendIntervalMax" HorizontalAlignment="Left" Height="33" Margin="173,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" BorderBrush="{x:Null}" Background="#FF555353" Foreground="White" FontSize="22"/>
                 </Grid>
             </TabItem>
         </TabControl>
         <Button x:Name="BtnColar" Content="Iniciar" HorizontalAlignment="Left" Margin="105,0,0,0" VerticalAlignment="Top" Width="90" Height="34" Foreground="White" Background="#FF303036" BorderBrush="{x:Null}" Click="BtnColar_Click"/>
+        <Button x:Name="BtnStop" Content="Stop" HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="90" Height="34" Foreground="White" Background="#FF303036" BorderBrush="{x:Null}" Click="BtnStop_Click"/>
+        <Button x:Name="BtnRefresh" Content="Atualizar" HorizontalAlignment="Left" Margin="295,0,0,0" VerticalAlignment="Top" Width="90" Height="34" Foreground="White" Background="#FF303036" BorderBrush="{x:Null}" Click="BtnRefresh_Click"/>
+        <Button x:Name="BtnRestart" Content="Reiniciar" HorizontalAlignment="Left" Margin="390,0,0,0" VerticalAlignment="Top" Width="90" Height="34" Foreground="White" Background="#FF303036" BorderBrush="{x:Null}" Click="BtnRestart_Click"/>
 
     </Grid>
 </Window>

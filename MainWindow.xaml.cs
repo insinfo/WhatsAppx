@@ -17,6 +17,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using CefSharp;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace WhatsAppx
 {
@@ -30,55 +31,91 @@ namespace WhatsAppx
         CefSharp.Wpf.ChromiumWebBrowser Browser;  
         TempFileDialogHandler tempFileDialogHandler;
         DBHandlerMySQL dbHandlerMySQL;
+        Log log;
         Random randon = null;
         IntPoint btnOpenMenuAnexoXY = null;
         IntPoint searchInputXY = null;
-        
+        CefSharp.CefSettings cefSettings = null;
 
         public MySettings Settings { get; private set; }
+        public bool isStop = false;
+
+        private Random randomStr = new Random();
+        private string[] emojis = { "\U0001F600","\U0001f627","\U0001f62e","\U0001f62f", "\U0001F600", "\U0001F603", "\U0001F604" };
+
+        public string RandomString(int length=20)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#.$%&*@=+$!";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[randomStr.Next(s.Length)]).ToArray());
+        }
+
+        public string RandomEmoji(int lenght =10)
+        {            
+            var result = "";
+            for (var i=0;i < lenght; i++)
+            {
+                result+= emojis[randon.Next(0, emojis.Length)];              
+            }
+            return result;
+        }
 
         public void LoadSettings()
         {
             TxtHost.Text = Settings.Server;
             TxtDataBase.Text = Settings.Database;
             TxtPassword.Password = Settings.Password;
-            TxtUser.Text = Settings.User;
-            TxtUserAgent.Text = Settings.UserAgent;
+            TxtUser.Text = Settings.User;          
+            TxtLimit.Text = Settings.Limit.ToString();
+            TxtUserAgent.ItemsSource = Settings.UserAgents;
+            TxtUserAgent.SelectedValue = Settings.UserAgent;
+            TxtDevice.ItemsSource = dbHandlerMySQL.GetDevices();
+            TxtDevice.SelectedValue = Settings.Device;
+            TxtSendIntervalMin.Text = Settings.SendIntervalMin.ToString();
+            TxtSendIntervalMax.Text = Settings.SendIntervalMax.ToString();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            LoadSettings();           
+            LoadSettings();
+            Regex myRegex = new Regex("(?i)(windows|linux|mac|mactosh)");
+            Title = Settings.Device + " | " + myRegex.Match(Settings.UserAgent).Value;
         }
 
         public MainWindow()
         {
+            InitializeComponent();
+            Start();
+        }
+
+        public void Start()
+        {
             randon = new Random();
             var mySett = new MySettings();
             this.Settings = mySett.Read();
-            
+
             dbHandlerMySQL = new DBHandlerMySQL();
             dbHandlerMySQL.Server = Settings.Server;
             dbHandlerMySQL.Port = Settings.Port;
             dbHandlerMySQL.Password = Settings.Password;
             dbHandlerMySQL.User = Settings.User;
             dbHandlerMySQL.Database = Settings.Database;
-            dbHandlerMySQL.Connect();           
-
-            InitializeComponent();
-            CefSharp.CefSettings settings = new CefSharp.CefSettings();
-            settings.CachePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\CEF";
-            settings.PersistSessionCookies = true;
-            settings.PersistUserPreferences = true;
-            settings.UserAgent = Settings.UserAgent;        
-            CefSharp.Cef.Initialize(settings);
+            dbHandlerMySQL.Connect();
+            log = new Log();
+           
+            cefSettings = new CefSharp.CefSettings();
+           /* cefSettings.CachePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\CEF";
+            cefSettings.PersistSessionCookies = false;
+            cefSettings.PersistUserPreferences = false;*/
+            cefSettings.UserAgent = Settings.UserAgent;
+            CefSharp.Cef.Initialize(cefSettings);
 
             Browser = new CefSharp.Wpf.ChromiumWebBrowser();
-            Browser.Address = "https://web.whatsapp.com/";
+            Browser.Address = "https://web.whatsapp.com";
             Browser.FrameLoadEnd += Browser_FrameLoadEnd;
             Browser.ConsoleMessage += Browser_ConsoleMessage;
             tempFileDialogHandler = new TempFileDialogHandler();
-            Browser.DialogHandler = tempFileDialogHandler;
+           // Browser.DialogHandler = tempFileDialogHandler;
 
             GridBrowser.Children.Add(Browser);
         }
@@ -145,7 +182,21 @@ namespace WhatsAppx
                 
         private void BtnExecute_Click(object sender, RoutedEventArgs e)
         {
-            TriggerClickEvent(searchInputXY);
+            //cefSettings.UserAgent = Settings.UserAgents[randon.Next(0, 7)];
+            //cefSettings.CefCommandLineArgs.Remove("user-agent");
+            //cefSettings.CefCommandLineArgs.Add("user-agent", "CefSharp");
+            /*log.Task = "dfsd"; log.Numero = "sdfsd";
+            dbHandlerMySQL.InsertObj(log);*/
+
+            /*var cont = new Contato();
+            cont.Id = 1;
+            cont.Nome = "22997190020";
+            cont.Telefone = "22997190020";
+            cont.Device = "Bernardo Oliveira";
+            cont.Enviou = true;
+            dbHandlerMySQL.UpdateObject(cont, cont.Id); */
+
+            //TriggerClickEvent(searchInputXY);
             //var contatos = dbHandlerMySQL.GetContatos();
             //Console.WriteLine(contatos[0].Nome);
             // Console.WriteLine(dbHandlerMySQL.GetLastMensagem().Media);
@@ -178,148 +229,201 @@ namespace WhatsAppx
            */
             //browser.MainFrame.Paste();
 
-            /*KeyEvent k = new KeyEvent();
-            k.WindowsKeyCode = 0x41;
-            k.FocusOnEditableField = true;
-            k.IsSystemKey = false;
-            k.Type = KeyEventType.KeyDown;
-
-            browser.GetHost().SendKeyEvent(k);*/
+            /* KeyEvent k = new KeyEvent();
+             k.WindowsKeyCode = 0x41;
+             k.FocusOnEditableField = true;
+             k.IsSystemKey = false;
+             k.Type = KeyEventType.KeyDown;
+             browser.GetHost().SendKeyEvent(k);*/
         }
+
         public int GetTime(bool max = false,bool med = false)
         {
             if (max)
             {
-                return randon.Next(10000, 14000);
+                return randon.Next(5000, 10000);
             }
+            //intervalo entre uma mensagem e outra
             if (med)
             {
-                return randon.Next(10000, 14000);
+                return randon.Next(Settings.SendIntervalMin, Settings.SendIntervalMax);
             }
             return randon.Next(1550, 3850);
         }
-
+        //executa o robo
         private async void BtnColar_Click(object sender, RoutedEventArgs e)
         {
             //browser.MainFrame.Paste();
             //LeftMouseClick(170, 231);
-
-            var contatos = dbHandlerMySQL.GetContatos();
-            var mensagem = dbHandlerMySQL.GetLastMensagem();
-            var mainFrame = browser.MainFrame;
-
-            foreach (Contato contato in contatos)
-            {
-                var mensagemTexto = mensagem.Texto;               
-                var nomeContato = contato.Nome;
-
-                //1º obtem a posição x y da caixa de pesquisa e digita o nome do contato
-                var task1 = mainFrame.EvaluateScriptAsync(GetSearchInputXY());
-                await task1.ContinueWith(tas1 =>
+            try
+            { 
+                var contatos = dbHandlerMySQL.GetContatos(Settings.Device);
+                var mensagem = dbHandlerMySQL.GetLastMensagem();
+                var mainFrame = browser.MainFrame;
+                int contador = 0;
+                foreach (Contato contato in contatos)
                 {
-                    if (!tas1.IsFaulted)
+                    if (contador == Settings.Limit)
                     {
-                        var p1 = tas1.Result.Success ? (tas1.Result.Result ?? "null") : tas1.Result.Message;
-                        Debug.WriteLine("GetSearchInputXY " + p1);
-                        //clica na caixa de pesquisa
-                        searchInputXY = GetPointFromObj(p1);
-                        TriggerClickEvent(searchInputXY);                      
-                        //digita o nome do contato
-                        DigitaNomeContato(nomeContato);
+                        break;
                     }
-                }, TaskScheduler.FromCurrentSynchronizationContext());
-                //aguarda 3 segundos
-                await Task.Delay(GetTime());
-                //2º inicia o chat
-                var task2 = mainFrame.EvaluateScriptAsync(StartChatWith(nomeContato));
-                await task2.ContinueWith(tas2 =>
-                {
-                    if (!tas2.IsFaulted)
+                    if (isStop) { break; }
+                    if (contato.Enviou == false)
                     {
-                        var isOk = tas2.Result.Success ? (tas2.Result.Result ?? "null") : tas2.Result.Message;
-                        Debug.WriteLine("StartChatWith " + isOk);
-                    }
-                }, TaskScheduler.FromCurrentSynchronizationContext());
-               
-                //5º anexa arquivo se tiver
-                if (mensagem.Media != null)
-                {
-                    //tempFileDialogHandler.FilePath = mensagem.Media;
-                    //aguarda 3 segundos
-                    await Task.Delay(GetTime());
-                    //5º opem menu anexa arquivo
-                    var task5 = mainFrame.EvaluateScriptAsync(GetBtnOpenMenuAnexoXY());
-                    await task5.ContinueWith(tas5 =>
-                    {
-                        if (!tas5.IsFaulted)
+                        var mensagemTexto = mensagem.Texto;
+                        var nomeContato = contato.Nome;
+
+                        //1º obtem a posição x y da caixa de pesquisa e digita o nome do contato
+                        var task1 = mainFrame.EvaluateScriptAsync(GetSearchInputXY());
+                        await task1.ContinueWith(tas1 =>
                         {
-                            var p5 = tas5.Result.Success ? (tas5.Result.Result ?? "null") : tas5.Result.Message;
-                            Debug.WriteLine("GetBtnOpenMenuAnexoXY " + p5);
-                            //clica 
-                            btnOpenMenuAnexoXY = GetPointFromObj(p5);
+                            if (!tas1.IsFaulted)
+                            {
+                                var p1 = tas1.Result.Success ? (tas1.Result.Result ?? "null") : tas1.Result.Message;
+                                Debug.WriteLine("GetSearchInputXY " + p1);
+                            //clica na caixa de pesquisa
+                            searchInputXY = GetPointFromObj(p1);
+                                TriggerClickEvent(searchInputXY);
+                            //digita o nome do contato
+                            DigitaNomeContato(nomeContato);
+                            }
+                        }, TaskScheduler.FromCurrentSynchronizationContext());
+                        //aguarda 3 segundos
+                        await Task.Delay(GetTime());
+                        //2º inicia o chat
+                        var task2 = mainFrame.EvaluateScriptAsync(StartChatWith(nomeContato));
+                        await task2.ContinueWith(tas2 =>
+                        {
+                            if (!tas2.IsFaulted)
+                            {
+                                var isOk = tas2.Result.Success ? (tas2.Result.Result ?? "null") : tas2.Result.Message;
+                                Debug.WriteLine("StartChatWith " + isOk);
+                            }
+                        }, TaskScheduler.FromCurrentSynchronizationContext());
+
+                        //5º anexa arquivo se tiver
+                        if (mensagem.Media != null && mensagem.Media.Trim() != "")
+                        {
+                            tempFileDialogHandler.FilePath = mensagem.Media;
+                            Debug.WriteLine(tempFileDialogHandler.FilePath);
+                            //aguarda 3 segundos
+                            await Task.Delay(GetTime());
+                            //5º opem menu anexa arquivo
+                            var task5 = mainFrame.EvaluateScriptAsync(GetBtnOpenMenuAnexoXY());
+                            await task5.ContinueWith(tas5 =>
+                            {
+                                if (!tas5.IsFaulted)
+                                {
+                                    var p5 = tas5.Result.Success ? (tas5.Result.Result ?? "null") : tas5.Result.Message;
+                                    Debug.WriteLine("GetBtnOpenMenuAnexoXY " + p5);
+                                //clica 
+                                btnOpenMenuAnexoXY = GetPointFromObj(p5);
+                                    TriggerClickEvent(btnOpenMenuAnexoXY);
+                                }
+                            }, TaskScheduler.FromCurrentSynchronizationContext());
+                            //aguarda 3 segundos
+                            await Task.Delay(GetTime());
+                            //6º clica no botão anexa arquivo
+                            var task6 = mainFrame.EvaluateScriptAsync(GetBtnAnexaFotoXY());
+                            await task6.ContinueWith(tas6 =>
+                            {
+                                if (!tas6.IsFaulted)
+                                {
+                                    var p6 = tas6.Result.Success ? (tas6.Result.Result ?? "null") : tas6.Result.Message;
+                                    Debug.WriteLine("GetBtnAnexaFotoXY " + p6);
+                                //clica 
+                                TriggerClickEvent(GetPointFromObj(p6));
+                                }
+                            }, TaskScheduler.FromCurrentSynchronizationContext());
+                            //aguarda 10 segundos
+                            await Task.Delay(GetTime(true));
+                        }
+                        //aguarda 3 segundos
+                        await Task.Delay(GetTime());
+                        //3º obtem a posição x y da caixa mensagem 
+                        var task3 = mainFrame.EvaluateScriptAsync(GetMessageInputXY());
+                        await task3.ContinueWith(tas3 =>
+                        {
+                            if (!tas3.IsFaulted)
+                            {
+                                var p2 = tas3.Result.Success ? (tas3.Result.Result ?? "null") : tas3.Result.Message;
+                                Debug.WriteLine("GetMessageInputXY " + p2);
+                            //clica na caixa de mensagem
+                            TriggerClickEvent(GetPointFromObj(p2));
+                            //digita o testo da mensagem
+                            //DigitaNomeContato(mensagemTexto);
+                                Clipboard.SetText(mensagemTexto+" "+ RandomEmoji()+""+RandomString());
+                                browser.MainFrame.Paste();
+                            //LeftMouseClick(GetPointFromObj(p2).X, GetPointFromObj(p2).Y);
+                        }
+                        }, TaskScheduler.FromCurrentSynchronizationContext());
+                        await Task.Delay(GetTime());
+                        //4º envia a mensagem
+                        var task4 = mainFrame.EvaluateScriptAsync(GetBtnSendMessageXY());
+                        await task4.ContinueWith(tas4 =>
+                        {
+                            if (!tas4.IsFaulted)
+                            {
+                                var p3 = tas4.Result.Success ? (tas4.Result.Result ?? "null") : tas4.Result.Message;
+                                Debug.WriteLine("GetBtnSendMessageXY " + p3);
+                            //clica no botão de envio de mensagem
+                            TriggerClickEvent(GetPointFromObj(p3));
+                            }
+                        }, TaskScheduler.FromCurrentSynchronizationContext());
+                        await Task.Delay(3000);
+                        //8º checa se enviou a mensagem
+                        var task8 = mainFrame.EvaluateScriptAsync(IsSendMessage());
+                        await task8.ContinueWith(tas8 =>
+                        {
+                            if (!tas8.IsFaulted)
+                            {
+                                var p8 = tas8.Result.Success ? (tas8.Result.Result ?? "null") : tas8.Result.Message;
+
+                                Debug.WriteLine("IsSendMessage " + p8);
+                                if (p8 != null)
+                                {
+                                    var result = p8.ToString().Split(';');
+
+                                    if (result.Length == 3)
+                                    {
+                                        var mensageEnviada = result[0];
+                                        var horaEnvio = result[1];
+                                        var contatoEnviado = result[2];
+                                        Debug.WriteLine("IsSendMessage " + contatoEnviado);
+                                        if (contatoEnviado.ToLower() == contato.Nome.ToLower())
+                                        {
+                                            //informa se enviou
+                                            contato.Enviou = true;
+                                            dbHandlerMySQL.UpdateObject(contato, contato.Id);
+                                        }
+                                    }
+                                }
+                            }
+                        }, TaskScheduler.FromCurrentSynchronizationContext());
+                        await Task.Delay(3000);
+                        Debug.WriteLine("fexa o menu ");
+                        if (btnOpenMenuAnexoXY != null)
+                        {
                             TriggerClickEvent(btnOpenMenuAnexoXY);
                         }
-                    }, TaskScheduler.FromCurrentSynchronizationContext());
-                    //aguarda 3 segundos
-                    await Task.Delay(GetTime());
-                    //6º clica no botão anexa arquivo
-                    var task6 = mainFrame.EvaluateScriptAsync(GetBtnAnexaFotoXY());
-                    await task6.ContinueWith(tas6 =>
-                    {
-                        if (!tas6.IsFaulted)
-                        {
-                            var p6 = tas6.Result.Success ? (tas6.Result.Result ?? "null") : tas6.Result.Message;
-                            Debug.WriteLine("GetBtnAnexaFotoXY " + p6);
-                            //clica 
-                            TriggerClickEvent(GetPointFromObj(p6));
-                        }
-                    }, TaskScheduler.FromCurrentSynchronizationContext());
-                    //aguarda 10 segundos
-                    await Task.Delay(GetTime(true));
-                }
-                //aguarda 3 segundos
-                await Task.Delay(GetTime());
-                //3º obtem a posição x y da caixa mensagem 
-                var task3 = mainFrame.EvaluateScriptAsync(GetMessageInputXY());
-                await task3.ContinueWith(tas3 =>
-                {
-                    if (!tas3.IsFaulted)
-                    {
-                        var p2 = tas3.Result.Success ? (tas3.Result.Result ?? "null") : tas3.Result.Message;
-                        Debug.WriteLine("GetMessageInputXY " + p2);
-                        //clica na caixa de mensagem
-                        TriggerClickEvent(GetPointFromObj(p2));
-                        //digita o testo da mensagem
-                        DigitaNomeContato(mensagemTexto);
-                        //LeftMouseClick(GetPointFromObj(p2).X, GetPointFromObj(p2).Y);
-                 }
-                }, TaskScheduler.FromCurrentSynchronizationContext());
-                await Task.Delay(GetTime()); 
-                //4º envia a mensagem
-                var task4 = mainFrame.EvaluateScriptAsync(GetBtnSendMessageXY());
-                await task4.ContinueWith(tas4 =>
-                {
-                    if (!tas4.IsFaulted)
-                    {
-                        var p3 = tas4.Result.Success ? (tas4.Result.Result ?? "null") : tas4.Result.Message;
-                        Debug.WriteLine("GetBtnSendMessageXY " + p3);
-                        //clica no botão de envio de mensagem
-                        TriggerClickEvent(GetPointFromObj(p3)); 
+                        //aguarda  segundos
+                        await Task.Delay(GetTime(false, true));
+                        TriggerClickEvent(searchInputXY);
+                        Debug.WriteLine("fim do envio de uma memsagem");
+                        contador++;
                     }
-                }, TaskScheduler.FromCurrentSynchronizationContext());
-                await Task.Delay(3000);
-                Debug.WriteLine("fexa o menu " + btnOpenMenuAnexoXY.X + ";" + btnOpenMenuAnexoXY.Y);
-                TriggerClickEvent(btnOpenMenuAnexoXY);
-                //aguarda 3 segundos
-                await Task.Delay(GetTime(false,true));
-                TriggerClickEvent(searchInputXY);
-                Debug.WriteLine("fim do envio da memsagem");                
+                }
+                Debug.WriteLine("fim do envio de todas as memsagens");
+                MessageBox.Show("fim do envio de todas as memsagens");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }                      
 
         public string StartChatWith(string contatoNome)
         {
-
             var scriptInitChat = @"
             //procura na lista o nome do contato informado
             //e simula a execução de click do mouse
@@ -373,6 +477,48 @@ namespace WhatsAppx
                 return xy;               
                 })();
             ";           
+            return scriptGetXYsearchInput;
+        }
+
+        public string SetMessage(string message)
+        {
+            //script para pegar a posição exata do botão de pesquisa
+            var scriptGetXYsearchInput = @"
+               (() => {        //retorna a posição do input de mensagem
+                var elem = document.querySelector('._2S1VP');
+                elem.innerText='"+message+ @"';
+                console.log('SetMessage: "+message+@"');
+                return true;               
+                })();
+            ";
+            return scriptGetXYsearchInput;
+        }
+
+        public string IsSendMessage()
+        {
+            //checa se a mensagem foi enviada
+            var scriptGetXYsearchInput = @"
+               (() => { 
+                var list = document.querySelector('._9tCEa');
+                var lists= document.querySelectorAll('._9tCEa .vW7d1');
+                var ultimo = null;
+                if(lists){
+                    for(var i=0; i < lists.length ;i++){
+                        ultimo = lists[i];
+                    }
+                }
+                if(ultimo){
+                    var texto = ultimo.querySelector('._3zb-j span');
+                    texto = texto ? texto.innerText : ' ';
+                    var hora = ultimo.querySelector('._1DZAH span');
+                    hora = hora ? hora.innerText : ' ';
+                    var contato = document.querySelector('._2zCDG span');
+                    contato = contato ? contato.innerText : ' ';
+                    return texto+';'+hora+';'+contato;
+                }
+                return null;
+                })();
+            ";
             return scriptGetXYsearchInput;
         }
 
@@ -558,19 +704,48 @@ namespace WhatsAppx
             Settings.Password = TxtPassword.Password;
             Settings.User = TxtUser.Text;
             Settings.UserAgent = TxtUserAgent.Text;
-
+            Settings.Device = TxtDevice.Text;
+            Settings.Limit = Convert.ToInt32(TxtLimit.Text);
+            Settings.SendIntervalMin = Convert.ToInt32(TxtSendIntervalMin.Text);
+            Settings.SendIntervalMax = Convert.ToInt32(TxtSendIntervalMax.Text);
             Settings.Save();
+        }
+
+        private void BtnStop_Click(object sender, RoutedEventArgs e)
+        {
+            isStop = true;
+            /* if (isStop)
+             {
+                 isStop = false;
+                 BtnStop.Content = "false";
+             }
+             else
+             {
+                 BtnStop.Content = "true";
+                 isStop = true;
+             }*/
+        }
+
+        private void BtnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            Browser.Reload(true);
+        }
+        //reinicia a aplicaçao
+        private void BtnRestart_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+            Application.Current.Shutdown();
         }
     }
     //subistitui o file dialog do navegar
     public class TempFileDialogHandler : IDialogHandler
     {
-        public string FilePath { get; set; } = @"c:\teste.jpeg";
+        public string FilePath { get; set; } = @"c:\convite.jpeg";
 
         public bool OnFileDialog(IWebBrowser browserControl, IBrowser browser, CefFileDialogMode mode, string title, string defaultFilePath, List<string> acceptFilters, int selectedAcceptFilter, IFileDialogCallback callback)
         {
-            defaultFilePath = @"c:\teste.jpeg";
-            Debug.WriteLine("OnFileDialog ");
+            defaultFilePath = FilePath;
+            Debug.WriteLine("OnFileDialog "+ FilePath);
             //callback = new FileDialogCallback();
             //MessageBox.Show("dfg");
             callback.Continue(selectedAcceptFilter, new List<string> { FilePath });            

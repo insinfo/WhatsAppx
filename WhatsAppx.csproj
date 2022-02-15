@@ -120,6 +120,7 @@
     <Compile Include="DBHandlerMySQL.cs" />
     <Compile Include="IntPoint.cs" />
     <Compile Include="KeyCodes.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
